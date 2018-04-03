@@ -67,7 +67,7 @@
 			</ul>
 			</div>	  
 		</div>
-	
+<!-- 	safasdffd -->
 		
 	<jsp:include page="../footer.jsp"></jsp:include>  
 </body>
