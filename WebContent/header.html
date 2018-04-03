@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="http://localhost:8080/coinweb/CSS/coin.css">
+<body>
+<header>
+<!-- Navigation -->
+<div class="topnav" id="navbar">
+	<div class="nav">
+  <a class="active" href="#home"><span>Home<span></a>
+  <div class="topnav-right">
+    <a href="#contact">거래하기</a>
+    <a href="#about">로그인</a>
+    <a href="#news">회원가입</a>
+      <div class="dropdown">
+ 	<button  class="dropbtn" href="#contact">커뮤니티<i class="fa fa-caret-down"></i></button>
+ 	 <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+    </div>
+ 	<div class="dropdown">
+ 	<button  class="dropbtn" href="#contact">고객센터<i class="fa fa-caret-down"></i></button>
+ 	 <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+</header>
+
+</body>
+<script>
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+</html>
+

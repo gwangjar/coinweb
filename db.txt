@@ -1,0 +1,40 @@
+create table coinweb_member(
+id number(5) constraint pk_coinweb_member_id primary key,
+email varchar2(40) constraint uk_coinweb_member_email not null unique,
+name varchar2(10) not null,
+pass varchar2(30) not null,
+agree varchar2(10),
+jdate date
+);
+
+create sequence sequ_coinweb_member_id
+  start with 1001
+  increment by 1;
+
+create table wallet(
+id number(5) constraint pk_wallet_id primary key,
+money number(15),
+coin_amount number(15),
+coin_name varchar2(10),
+available_balance number(32,8),
+using_balance number(32,8),
+tot_money number(15),
+state varchar2(10)
+);
+
+create table coin_order(
+id number(5) constraint pk_order_id primary key,
+price number(15),
+price_completed number(15),
+amount number(10,4),
+amount_completed number(10,4),
+completed_dtm date,
+cancel_dtm date
+);
+
+create table coin_history(
+id number(5) constraint pk_history_id primary key,
+coin_order varchar(10), 
+price number(15),
+amount number(10,4)
+);
