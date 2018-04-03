@@ -3,42 +3,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<link rel="stylesheet" type="text/css" href="http://localhost:9010/WebprojectCoin/css/coin.css">
-<script type="text/javascript" src="http://localhost:9010/WebprojectCoin/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="../se/js/service/HuskyEZCreator.js" charset="euc-kr"></script>
-<!-- favicon coin - ref : https://www.cmsfactory.net/node/10463 -->
-<link rel="shortcut icon" href="http://localhost:9010/WebprojectCoin/images/favicon.ico">
-<script type="text/javascript" src="http://localhost:9010/WebprojectCoin/js/se2_board.js" async="async" ></script><!-- http://dailydev.tistory.com/15 -->
-
-<title>Insert title here</title>
-
+	<title>COIN.COM</title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- COIN.CSS -->	
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/coinweb/css/coin.css">
+	<!-- favicon coin - ref : https://www.cmsfactory.net/node/10463 -->
+	<link rel="shortcut icon" href="http://localhost:8080/coinweb/images/favicon.ico">
+	 
 </head>
 <body>
-<jsp:include page="../header.jsp"></jsp:include> 
-		<div>
-			 <h2>Free Board Write</h2>
+
+	<jsp:include page="../header.jsp"></jsp:include> 
+		<div class="div_header">
+			 <h2>Freeboard</h2>
 		</div>
 		<div class="container">	  
-			<form action="#"  method="post">
-		  		<table class="table table-bordered table-striped">			  
-		    		 <tr>
-		     			<td><input type="text" placeholder="제목을 입력하세요" style="width: 100%" ></td>
-					 </tr>
-		    
+		  <table class="table table-bordered table-striped">	
 		      <tr>
-					<td><textarea name="ir1" id="ir1" rows="10" cols="100">에디터에 기본으로 삽입할 글(수정 모드)이 없다면 이 value 값을 지정하지 않으시면 됩니다.</textarea></td>
+		     		<th>NO</th>
+					<th>제목</th>
+					<th>작성자</th>
+					<th>작성일</th>
+					<th>조회수</th>
+					<th>좋아요</th>
+		      </tr>
+		      <tr> <!--10개 for 문 // 작성일 순으로 -->
+					<td>1</td>
+					<a href="#"><td>제목</td></a>
+					<td>작성자</td>
+					<td>작성일</td>
+					<td>조회수</td>
+					<td>좋아요</td>
+			  </tr>
+		      <tr>
+					<td>2</td>
+					<a href="#"><td>제목</td></a>
+					<td>작성자</td>
+					<td>작성일</td>
+					<td>조회수</td>
+					<td>좋아요</td>
 			 </tr>	
 			</table>
-				<div class="communityBoard_btn">
-					<a href=""><button type="submit" class="btn btn-warning">등록</button></a>
-					<button type="reset" class="btn">취소</button>
+			<!-- 검색 후 추출 기능 만들기communityBoardProcess.jsp -->							
+			<form action="#"  method="get">
+				 <div class="form-group">
+					<select class="form-control input-sm" name="tableContents">
+						<option value=title>제목</option>
+						<option value=contents>내용</select>
+					<input type="text" class="form-control form-group-search">
+					<button type="submit" class="btn btn-success ">검색</button>
+					<a href="http://localhost:8080/coinweb/community/freeboard_write.jsp"><button type="button" class="btn btn-warning form-group-write">글쓰기</button></a>
 				</div>
-			</form>			
+			</form>
+			<div class="text-center">
+			<ul class="pagination">
+				<li><a href="#"> < </a></li>
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#"> > </a></li>
+			</ul>
+			</div>	  
 		</div>
 	
+		
 	<jsp:include page="../footer.jsp"></jsp:include>  
 </body>
-
-
 </html>

@@ -1417,3 +1417,54 @@ ol, ul {
 	
 }
 
+/*======communityCoin======*/
+div.communityCoin_div ul{
+	list-style: none;
+	border: 1px solid gray;
+}
+div.communityCoin_div ul li{
+	display: block;	
+	width:100px;	
+	
+}
+div.communityCoin_div ul div{		
+	float: right;
+}
+/*==============================communityBoard===========================================*/
+/*communityBoard-Header*/
+div.div_header{
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	padding-top :65px;
+	color: white;
+	background: linear-gradient(to right , rgba(51, 153, 255, 0.9),#00CED1);
+}
+/*===*/
+
+div.container{
+	border: 1px solid rgb(102, 102, 153);
+	margin-top: 50px;
+	margin-bottom: 50px;	
+}
+div.container table.table-striped{
+	margin-top: 50px;
+}
+div.container div.form-group input{
+	display: inline;
+}
+div.container div.form-group select{
+	display: inline;
+}
+div.container div.form-group button.form-group-write{
+	float:right;
+}
+
+div.container div.form-group select.input-sm{
+	width: 85px;
+	height: 34px;
+}
+div.container div.form-group input.form-group-search{
+	width: 200px;
+}
+
