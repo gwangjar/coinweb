@@ -1,47 +1,25 @@
+
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR" import="coinweb.vo.BoardVO, coinweb.dao.BoardDAO, java.util.ArrayList"%>
-<%
-	request.setCharacterEncoding("EUC-KR");
-%>
-
-<%
-BoardDAO dao = new BoardDAO();
-ArrayList<BoardVO> list =dao.getBoardList();
-dao.close();
-%>
-
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-
 	<title>COIN.COM</title>
  	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- COIN.CSS -->	
-<link rel="stylesheet" type="text/css" href="http://localhost:8080/coinweb/CSS/coin.css">
-<script type="text/javascript" src="http://localhost:8080/coinweb/js/jquery-3.3.1.min.js"></script>
-	
-<!-- favicon coin - ref : https://www.cmsfactory.net/node/10463 -->
-<link rel="shortcut icon" href="http://localhost:8080/coinweb/images/favicon.ico">
-
-<!-- bootstrap -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- COIN.CSS -->	
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/coinweb/css/coin.css">
+	<!-- favicon coin - ref : https://www.cmsfactory.net/node/10463 -->
+	<link rel="shortcut icon" href="http://localhost:8080/coinweb/images/favicon.ico">
+	 
 </head>
-
-
 <body>
 
 	<jsp:include page="../header.jsp"></jsp:include> 
-	
-	
-		<div class="commtitle">
+		<div class="div_header">
 			 <h2>Freeboard</h2>
 		</div>
-		<div class="container container_comm">	  
+		<div class="container">	  
 		  <table class="table table-bordered table-striped">	
-		  
-
 		      <tr>
 		     		<th>NO</th>
 					<th>제목</th>
@@ -50,22 +28,22 @@ dao.close();
 					<th>조회수</th>
 					<th>좋아요</th>
 		      </tr>
-		      
-		      	<% for(BoardVO vo : list){%>
-		  		<tr>
-			  		<td><%=vo.getNo()%></td>
-			  		<td> 
-			  		<a href="http://localhost:8080/coinweb/community/freeboard_content.jsp?no=<%=vo.getNo()%>">
-			  		<%=vo.getTitle() %></a>
-			  		</td>	
-			  		<td><%=vo.getName() %></td>
-			  		<td><%=vo.getBdate()%></td>
-			  		<td><%=vo.getHits() %></td>
-			  		<td><%=vo.getLikeit() %></td>	  		
-		  		</tr>	  		
-		  		<% }%>
-		     
-			
+		      <tr> <!--10개 for 문 // 작성일 순으로 -->
+					<td>1</td>
+					<a href="#"><td>제목</td></a>
+					<td>작성자</td>
+					<td>작성일</td>
+					<td>조회수</td>
+					<td>좋아요</td>
+			  </tr>
+		      <tr>
+					<td>2</td>
+					<a href="#"><td>제목</td></a>
+					<td>작성자</td>
+					<td>작성일</td>
+					<td>조회수</td>
+					<td>좋아요</td>
+			 </tr>	
 			</table>
 			<!-- 검색 후 추출 기능 만들기communityBoardProcess.jsp -->							
 			<form action="#"  method="get">
@@ -74,8 +52,8 @@ dao.close();
 						<option value=title>제목</option>
 						<option value=contents>내용</select>
 					<input type="text" class="form-control form-group-search">
-					<button type="submit" class=" btn-success" style="width: 100px; border-radius: 10px; height: 30px;" >검색</button>
-					<a href="http://localhost:8080/coinweb/community/freeboard_write.jsp"><button type="button" class=" btn-warning form-group-write" style="width: 100px; border-radius : 10px; height: 30px;">글쓰기</button></a>
+					<button type="submit" class="btn btn-success ">검색</button>
+					<a href="http://localhost:8080/coinweb/community/freeboard_write.jsp"><button type="button" class="btn btn-warning form-group-write">글쓰기</button></a>
 				</div>
 			</form>
 			<div class="text-center">
@@ -90,8 +68,9 @@ dao.close();
 			</ul>
 			</div>	  
 		</div>
-	
+<!-- 	safasdffd -->
 		
 	<jsp:include page="../footer.jsp"></jsp:include>  
 </body>
+
 </html>
