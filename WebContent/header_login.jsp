@@ -28,7 +28,7 @@
  	 <div class="dropdown-content">
       <a href="http://localhost:8080/coinweb/Rangking/Rangk.jsp">랭킹</a>
       <a href="#">자유게시판</a>
-     <!--   <a href="#">코인소식</a>-->
+  	<a href="#">코인소식</a>
     </div>
     </div>
  	<div class="dropdown">

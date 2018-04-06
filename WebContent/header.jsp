@@ -13,7 +13,7 @@ $(document).ready(function(){
 	
 	$("#btnLogin").click(function(){
 		if($("#signin-email").val()==""){
-			alert("아이디를 입력하세요.")
+			alert("아이디를 입력하세요!")
 			$("#signin-email").focus();
 			return false;
 		}else if($("#signin-password").val()==""){
